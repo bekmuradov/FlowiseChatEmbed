@@ -15,6 +15,8 @@ import { DeleteButton } from '@/components/SendButton'
 
 type messageType = 'apiMessage' | 'userMessage' | 'usermessagewaiting'
 
+const defaultColor = '#ff3951'
+
 export type MessageType = {
     message: string
     type: messageType,
@@ -371,6 +373,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
         <>
             <div ref={botContainer} class={'relative flex w-full h-full text-base overflow-hidden bg-cover bg-center flex-col items-center chatbot-container ' + props.class}>
                 <div class="flex w-full h-full justify-center">
+                    Test message
                     <div style={{ "padding-bottom": '100px', "padding-top": '70px' }} ref={chatContainer} class="overflow-y-scroll min-w-full w-full min-h-full px-3 pt-10 relative scrollable-container chatbot-chat-view scroll-smooth">
                         <For each={[...messages()]}>
                             {(message, index) => (
@@ -378,7 +381,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
                                     {message.type === 'userMessage' && (
                                         <GuestBubble
                                             message={message.message}
-                                            backgroundColor={props.userMessage?.backgroundColor}
+                                            backgroundColor={defaultColor}
                                             textColor={props.userMessage?.textColor}
                                             showAvatar={props.userMessage?.showAvatar}
                                             avatarSrc={props.userMessage?.avatarSrc}

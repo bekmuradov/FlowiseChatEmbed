@@ -51,7 +51,7 @@ export const Bubble = (props: BubbleProps) => {
             >
                 <Show when={isBotStarted()}>
                     <Bot
-                        badgeBackgroundColor={bubbleProps.theme?.chatWindow?.backgroundColor}
+                        badgeBackgroundColor={defaultButtonColor}
                         bubbleBackgroundColor={bubbleProps.theme?.button?.backgroundColor ?? defaultButtonColor}
                         bubbleTextColor={bubbleProps.theme?.button?.iconColor ?? defaultIconColor}
                         title={bubbleProps.theme?.chatWindow?.title}
