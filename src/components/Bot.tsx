@@ -373,7 +373,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
         <>
             <div ref={botContainer} class={'relative flex w-full h-full text-base overflow-hidden bg-cover bg-center flex-col items-center chatbot-container ' + props.class}>
                 <div class="flex w-full h-full justify-center">
-                    Test message
+                    <span>Test message</span>
                     <div style={{ "padding-bottom": '100px', "padding-top": '70px' }} ref={chatContainer} class="overflow-y-scroll min-w-full w-full min-h-full px-3 pt-10 relative scrollable-container chatbot-chat-view scroll-smooth">
                         <For each={[...messages()]}>
                             {(message, index) => (
@@ -437,7 +437,7 @@ export const Bot = (props: BotProps & { class?: string }) => {
                         top: 0,
                         left: 0,
                         width: '100%',
-                        background: props.bubbleBackgroundColor,
+                        background: defaultColor,
                         color: props.bubbleTextColor,
                         "border-top-left-radius": props.isFullPage ? '0px' : '6px',
                         "border-top-right-radius": props.isFullPage ? '0px' : '6px'
